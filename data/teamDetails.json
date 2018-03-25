@@ -1,0 +1,25 @@
+[{
+    "team" : "Valkyrie",
+    "capName" : "Robin",
+    "capId" : "789456",
+    "vcapName" : "SPM",
+    "vcapId" : "789456" 
+}, {
+    "team" : "Illuminati",
+    "capName" : "ABC",
+    "capId" : "789456",
+    "vcapName" : "MNC",
+    "vcapId" : "789456" 
+}, {
+    "team" : "Spartans",
+    "capName" : "Biplab",
+    "capId" : "789456",
+    "vcapName" : "XYZ",
+    "vcapId" : "789456" 
+}, {
+    "team" : "Archadians",
+    "capName" : "Raju",
+    "capId" : "789456",
+    "vcapName" : "ABC",
+    "vcapId" : "789456" 
+}]

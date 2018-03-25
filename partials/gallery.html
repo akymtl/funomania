@@ -1,0 +1,63 @@
+<link rel="stylesheet" type="text/css" href="../css/user/gallery.css" />
+
+<div class="overlay" ng-if="">
+  <div class="overlay-content">
+    <img class="loader-img" src="../image/loader.png" alt="">
+  </div>
+</div>
+
+<div class="col-md-offset-1 col-md-10 partial-page" ng-init="init()">
+    <div class="row" style="margin-right: 0px;">
+        <div class="col-sm-3">                
+            <div class="sidenav">
+                <a ng-click="showVideo()" class="gallery-active">Funomania 2017</a>
+                <a ng-click="showImages(event.eventName)" ng-repeat="event in events track by $index">{{event.eventName}}</a>
+            </div>
+        </div>
+        <div class="col-sm-9 grey-background">
+            <video class="video-position" width="800" height="450" controls preload="auto" poster="../image/funomania17.jpg" ng-if="video">
+                <source src="../video/funomania17.mp4" type="video/mp4">
+            </video>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel" ng-if="!video" data-interval="3000">
+                
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                    <li data-target="#myCarousel" data-slide-to="4"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="../gallery/1.jpg" alt="Los Angeles" style="max-width:100%;">        
+                    </div>        
+                    <div class="item">
+                        <img src="../gallery/2.jpg" alt="Los Angeles" style="max-width:100%;">        
+                    </div>        
+                    <div class="item">
+                        <img src="../gallery/3.jpg" alt="Los Angeles" style="max-width:100%;">        
+                    </div>        
+                    <div class="item">
+                        <img src="../gallery/4.jpg" alt="Los Angeles" style="max-width:100%;">        
+                    </div>        
+                    <div class="item">
+                        <img src="../gallery/5.jpg" alt="Los Angeles" style="max-width:100%;">        
+                    </div>        
+                </div>
+            </div>
+        </div>
+    </div>   
+</div>
+<script>
+    $(document).ready(function () {
+        $('a').click(function () {
+            $('a').removeClass('gallery-active');
+            $(this).addClass('gallery-active');                
+        });
+        $('ol > li:first-child').addClass('active');
+        $('ol + div > div').addClass('active');  
+    });
+</script>

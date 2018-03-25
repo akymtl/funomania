@@ -1,0 +1,60 @@
+<link rel="stylesheet" href="css/user/feedback.css">
+
+<div class="overlay" ng-if="loader">
+  <div class="overlay-content">
+    <img class="loader-img" src="../image/loader.png">
+  </div>
+</div>
+
+<div class="col-md-offset-1 col-md-10 partial-page" ng-init="init()">
+    
+    <div class="alert alert-success" ng-if="success">
+        Your feedback has been submitted.
+    </div>
+    
+    <!--Feedback Form-->
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="name">Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="name" placeholder="Enter name" ng-model="feedback.name">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="comment">Comment</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="comment" placeholder="Enter comment" ng-model="feedback.comment">
+            </div>
+        </div>
+        <div class="form-group"> 
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-lg btn-primary" ng-click="submitFeedback()">Submit</button>
+            </div>
+        </div>
+    </form>
+    
+    <!--Feedback Table-->
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>COMMENTED BY</th>
+                <th>COMMENT</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="feedback in feedbacks">
+                <td class="text-center">{{$index+1}}</td>
+                <td>{{feedback.name}}</td>
+                <td>{{feedback.comment}}</td>
+            </tr>
+        </tbody>
+    </table>    
+</div>
+<script>
+    window.setTimeout(function() {
+        $(".alert").fadeTo(500, 0).slideUp(500, function(){
+            $(this).remove(); 
+        });
+    }, 3000);
+</script>

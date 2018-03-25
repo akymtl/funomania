@@ -1,0 +1,122 @@
+.timeline ul {
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 30px;
+}
+
+.timeline ul li {
+    background: #2480bf;
+    position: relative;
+    margin: 0 auto;
+    width: 1px;
+    list-style-type: none;
+}
+
+/*Circle*/
+.timeline ul li:before {
+    content: '';
+    background: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    border: 3px solid #2480bf;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+/*Box*/
+.timeline ul li .content {
+    background: #2480bf;
+    position: relative;
+    top: 12px;
+    width: 500px;
+    padding: 5px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+/*Box Content*/
+.timeline ul li .content p {
+    color: white;
+    padding-top: 18px;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(56, 56, 56, 0.5);
+}
+
+/*Connecting line*/
+.timeline ul li .content:before {
+    content: '';
+    background: #2480bf;
+    position: absolute;
+    top: 0px;
+    width: 47px;
+    height: 5px;
+}
+
+/*Box+Line right*/
+.timeline ul li:nth-child(odd) .content {
+    left: 50px;
+    background: #2480bf;
+    background: -webkit-linear-gradient(-45deg, #56bc83, #2480bf);
+    background: linear-gradient(-45deg, #56bc83, #2480bf);
+}
+
+/*Connecting line for right*/
+.timeline ul li:nth-child(odd) .content:before {
+    left: -38px;
+}
+
+/*Box+Line left*/
+.timeline ul li:nth-child(even) .content {
+    left: calc(-505px - 45px);
+    background: #2480bf;
+    background: -webkit-linear-gradient(45deg, #56bc83, #2480bf);
+    background: linear-gradient(45deg, #56bc83, #2480bf);
+}
+
+/*Connecting line for right*/
+.timeline ul li:nth-child(even) .content:before {
+    right: -38px;
+}
+/* -------------------------
+ ----- Media Queries ----- 
+ ------------------------- */
+@media screen and (max-width: 1020px) {
+  .timeline ul li .content {
+      width: 41vw;
+  }
+    
+  .timeline ul li:nth-child(even) .content {
+      left: calc(-41vw - 45px);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .timeline ul li {
+      margin-left: 20px;
+  }
+    
+  .timeline ul li .content {
+      width: calc(100vw - 100px);
+  }
+    
+  .timeline ul li .content h2 {
+      text-align: initial;
+  }
+    
+  .timeline ul li:nth-child(even) .content {
+      left: 45px;
+      background: #2480bf;
+      background: -webkit-linear-gradient(-45deg, #56bc83, #2480bf);
+      background: linear-gradient(-45deg, #56bc83, #2480bf);
+  }
+    
+  .timeline ul li:nth-child(even) .content:before {
+      left: -33px;
+  }
+}

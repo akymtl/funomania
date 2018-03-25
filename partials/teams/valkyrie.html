@@ -1,0 +1,57 @@
+<link rel="stylesheet" href="css/user/teams.css">
+
+<div class="col-md-offset-1 col-md-10 partial-page">
+    
+    <!--Alert-->
+    <div class="alert alert-success alert-dismissable fade in" ng-if="alert">
+        <p class="text-center"><strong>Congratulations!!!</strong> You are a part of team Valkyrie</p>
+    </div>
+    
+    <!--Team Image-->
+    <img class="img img-rounded img-reponsive img-thumbnail team-image" src="../../image/wallpaper valkyrie.jpg"/>
+    <br>
+    
+    <!--Team Details Table-->
+    <table class="table table-bordered table-striped table-condensed">
+        <thead>
+            <tr>
+                <th>Team name</th>
+                <th>Captain</th>
+                <th>Captain Emp Id</th>
+                <th>Vice Captain</th>
+                <th>Vice Captain Emp Id</th>
+                <th>Team Selection Criteria</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Valkyrie</td>
+                <td>{{vTeam.capName}}</td>
+                <td>{{vTeam.capId}}</td>
+                <td>{{vTeam.vcapName}}</td>
+                <td>{{vTeam.vcapId}}</td>
+                <td>Employee number with remainder 0</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <!--Team Description-->
+    <p class="text-justify">In Norse mythology, a
+        valkyrie is one of a host of female figures who choose those who may die
+        in battle and those who may live and also are described as the daughters
+        of royalty. An Asgardian by birth, Valkyrie, also known by her real
+        name, Brunnhilde, was selected by Odin to lead the Valkyrior. Selecting
+        among half of those who die in battle, the valkyries bring their chosen
+        to the afterlife hall of the slain, Valhalla, ruled over by the god
+        Odin. There, the deceased warriors become einherjar (Old Norse "single
+        (or once) fighters"). When the einherjar are not preparing for the
+        events of Ragnarok, the valkyries bear them mead.
+    </p>
+</div>
+<script>
+    window.setTimeout(function() {
+        $(".alert").fadeTo(500, 0).slideUp(500, function(){
+            $(this).remove(); 
+        });
+    }, 3000);
+</script>

@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="css/user/teams.css">
+
+<div class="col-md-offset-1 col-md-10 partial-page">
+    
+    <!--Alert-->
+    <div class="alert alert-success alert-dismissable fade in" ng-if="alert">
+        <p class="text-center"><strong>Congratulations!!!</strong> You are a part of team Archadians</p>
+    </div>
+    
+    <!--Team Image-->
+    <img class="img img-rounded img-reponsive img-thumbnail team-image" src="../../image/wallpaper archadians.jpg"/>
+    <br>
+    
+    <!--Team Details Table-->
+    <table class="table table-bordered table-striped table-condensed">
+        <thead>
+            <tr>
+                <th>Team name</th>
+                <th>Captain</th>
+                <th>Captain Emp Id</th>
+                <th>Vice Captain</th>
+                <th>Vice Captain Emp Id</th>
+                <th>Team Selection Criteria</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Archadians</td>
+                <td>{{aTeam.capName}}</td>
+                <td>{{aTeam.capId}}</td>
+                <td>{{aTeam.vcapName}}</td>
+                <td>{{aTeam.vcapId}}</td>
+                <td>Employee number with remainder 3</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <!--Team Description-->
+    <p class="text-justify">The Arcadians were the
+        oldest Greek tribes which settled in Greece and it was probably a
+        relative tribe of the proto-Greeks who are mentioned by the ancient
+        authors as Pelasgians. They participated in the Persian Wars alongside
+        other Greeks by sending forces to Thermopylae and Plataea. During the
+        Peloponnesian War Arcadia allied with Sparta and Corinth. In the
+        following years, during the period of the Hegemony of Thebes, the Theban
+        general Epaminondas reinforced the Arcadian federation in order to form
+        a rival pole to the neighboring Sparta.
+    </p>
+</div>
+<script>
+    window.setTimeout(function() {
+        $(".alert").fadeTo(500, 0).slideUp(500, function(){
+            $(this).remove(); 
+        });
+    }, 3000);
+</script>

@@ -1,0 +1,86 @@
+[{
+    "eventName" : "Treasure Hunt",
+    "eventDate" : "30 Jan 2017",
+    "vScore" : 30,
+    "iScore" : 20,
+    "sScore" : 40,
+    "aScore" : 10        
+}, {
+    "eventName" : "Football",
+    "eventDate" : "28 Feb 2017",
+    "vScore" : 10,
+    "iScore" : 20,
+    "sScore" : 30,
+    "aScore" : 40        
+}, {
+    "eventName" : "Cricket",
+    "eventDate" : "25 Mar 2017",
+    "vScore" : 40,
+    "iScore" : 10,
+    "sScore" : 20,
+    "aScore" : 30        
+}, {
+    "eventName" : "Tambola",
+    "eventDate" : "23 Apr 2017",
+    "vScore" : 30,
+    "iScore" : 20,
+    "sScore" : 40,
+    "aScore" : 10        
+}, {
+    "eventName" : "Potluck",
+    "eventDate" : "21 May 2017",
+    "vScore" : 30,
+    "iScore" : 40,
+    "sScore" : 10,
+    "aScore" : 20        
+}, {
+    "eventName" : "Pictionary",
+    "eventType" : "Major",
+    "eventDate" : "19 Jun 2017",
+    "vScore" : 20,
+    "iScore" : 30,
+    "sScore" : 40,
+    "aScore" : 10        
+}, {
+    "eventName" : "Dumb Charades",
+    "eventDate" : "17 Jul 2017",
+    "vScore" : 30,
+    "iScore" : 20,
+    "sScore" : 40,
+    "aScore" : 10        
+}, {
+    "eventName" : "Volleyball",
+    "eventDate" : "22 Aug 2017",
+    "vScore" : 10,
+    "iScore" : 20,
+    "sScore" : 30,
+    "aScore" : 40        
+}, {
+    "eventName" : "Carnival",
+    "eventDate" : "26 Sept 2017",
+    "vScore" : 30,
+    "iScore" : 20,
+    "sScore" : 40,
+    "aScore" : 10        
+}, {
+    "eventName" : "Badminton",
+    "eventDate" : "15 Oct 2017",
+    "vScore" : 30,
+    "iScore" : 20,
+    "sScore" : 40,
+    "aScore" : 10        
+}, {
+    "eventName" : "Throwball",
+    "eventDate" : "28 Nov 2017",
+    "vScore" : 10,
+    "iScore" : 20,
+    "sScore" : 30,
+    "aScore" : 40        
+}, {
+    "eventName" : "Pookalam",
+    "eventDate" : "26 Dec 2017",
+    "vScore" : 30,
+    "iScore" : 20,
+    "sScore" : 40,
+    "aScore" : 10        
+}]

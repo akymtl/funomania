@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="css/user/scores.css">
+
+<div class="col-md-offset-1 col-md-10 partial-page" ng-init="init()">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr class="text-center">
+                <th>EVENT NAME</th>
+                <th>EVENT DATE</th>
+                <th>VALKYRIE</th>
+                <th>ILLUMINATI</th>
+                <th>SPARTANS</th>
+                <th>ARCHADIANS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="text-center" ng-repeat="score in scores track by $index">
+                <td>{{score.eventName}}</td>
+                <td>{{score.eventDate}}</td>
+                <td>{{score.vScore}}</td>
+                <td>{{score.iScore}}</td>
+                <td>{{score.sScore}}</td>
+                <td>{{score.aScore}}</td>
+            </tr>
+        </tbody>
+        <tfoot class="total-score">
+            <tr class="text-center">
+                <td colspan="3"><strong>Total</strong></td>
+                <td>{{totalScore.vtotal}}</td>
+                <td>{{totalScore.itotal}}</td>
+                <td>{{totalScore.stotal}}</td>
+                <td>{{totalScore.atotal}}</td>
+            </tr>
+        </tfoot>        
+    </table>
+</div>

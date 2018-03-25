@@ -1,0 +1,24 @@
+{
+  "name": "funomania",
+  "version": "1.0.0",
+  "description": "A website to capture the details of monthly events in an office",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/akymtl/funomania/"
+  },
+  "keywords": [
+    "funomania"
+  ],
+  "author": "Akshay Mittal",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "http-server": "^0.9.0"
+  },
+  "scripts": {
+    "start": "http-server -a localhost -p 8000 -c-1 ."
+  }
+}

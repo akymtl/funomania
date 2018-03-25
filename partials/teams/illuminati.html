@@ -1,0 +1,57 @@
+<link rel="stylesheet" href="css/user/teams.css">
+
+<div class="col-md-offset-1 col-md-10 partial-page">
+    
+    <!--Alert-->
+    <div class="alert alert-success alert-dismissable fade in" ng-if="alert">
+        <p class="text-center"><strong>Congratulations!!!</strong> You are a part of team Illuminati</p>
+    </div>
+    
+    <!--Team Image-->
+    <img class="img img-rounded img-reponsive img-thumbnail team-image" src="../../image/wallpaper illuminati.jpg"/>
+    <br>
+    
+    <!--Team Details Table-->
+    <table class="table table-bordered table-striped table-condensed">
+        <thead>
+            <tr>
+                <th>Team name</th>
+                <th>Captain</th>
+                <th>Captain Emp Id</th>
+                <th>Vice Captain</th>
+                <th>Vice Captain Emp Id</th>
+                <th>Team Selection Criteria</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Illuminati</td>
+                <td>{{iTeam.capName}}</td>
+                <td>{{iTeam.capId}}</td>
+                <td>{{iTeam.vcapName}}</td>
+                <td>{{iTeam.vcapId}}</td>
+                <td>Employee number with remainder 1</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <!--Team Description-->
+    <p class="text-justify">The Illuminati refers to the
+        Bavarian Illuminati, an Enlightenment-era secret society founded on 16th
+        century. The society's goals were to oppose superstition, obscurantism,
+        religious influence over public life, and abuses of state power. They
+        are often alleged to conspire to control world affairs, by masterminding
+        events and planting agents in government and corporations, in order to
+        gain political power and influence and to establish a New World Order.
+        Central to some of the most widely known and elaborate conspiracy
+        theories, the Illuminati have been depicted as lurking in the shadows
+        and pulling the strings and levers of power.
+    </p>
+</div>
+<script>
+    window.setTimeout(function() {
+        $(".alert").fadeTo(500, 0).slideUp(500, function(){
+            $(this).remove(); 
+        });
+    }, 3000);
+</script>

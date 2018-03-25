@@ -1,0 +1,192 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    font-family: 'Quicksand';
+    font-size: 18px;
+    background: Snow;
+    margin-bottom: 60px; /* Margin bottom by footer height */
+}
+
+/*Navbar logo*/
+.logo {
+	display: inline-block;
+	vertical-align: top;
+	width: 66px;
+	height: 48px;
+	margin-top: 5px; /* if you want it vertically middle of the navbar. */
+	margin-bottom: 5px;
+	margin-left: 5px;
+}
+
+/*Navbar items when active*/
+.nav-active{
+    border: 2px solid #2480bf;
+    border-radius: 50px;
+    color: white !important;
+}
+
+/*Link color on hover*/
+nav div ul li a:hover, nav div ul li div a:hover {
+    color: white !important;
+}
+
+/*Transition time for effect*/
+nav div ul li a,
+nav div ul li a:after,
+nav div ul li a:before {
+    transition: all .25s;
+}
+
+nav div ul li a {
+    position:relative;
+    z-index: 1;
+}
+
+nav div ul li a:after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 1px;
+    content: '.';
+    color: transparent;
+    background: #2480bf;
+    visibility: none;
+    opacity: 0;
+    z-index: -1;
+    border-radius: 50px;
+}
+
+nav div ul li a:hover:after {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+}
+
+/*Spacing between nav links*/
+ul > li {
+    padding-right: 5px;
+    padding-left: 5px; 
+}
+
+/*Drop down on mouse hover*/
+li.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+.brand-bg {
+    font-size: 35px; 
+    margin-bottom: 10px;
+}
+
+input[type="number"]::-webkit-input-placeholder {
+  color: white;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.empId-text {
+    color: white !important;
+}
+
+.partial-page {
+	padding-top: 100px;
+	padding-bottom: 60px;    
+}
+
+/*Loader CSS*/
+/*Loader Container*/
+.overlay {
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0, 0.8);
+}
+
+/*Loader Content*/
+.overlay-content {
+    transition: .5s ease;
+    position: relative;
+    top: 25%;
+    width: 100%;
+}
+
+/*Loader Image*/
+.loader-img {
+    animation: shake 1s infinite;
+    display: block;
+    margin: auto;
+}
+
+/*Loader Animation CSS*/
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+/*Footer CSS*/
+/*Footer Container*/
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px; /* Set the fixed height of the footer here */
+    background-color: black;
+	color: white;
+}
+
+/*Footer Content*/
+.footer>div>div>.col-sm-4 {
+    padding-top: 17px;
+}
+
+.footer>div>div>div>p {
+    margin: 0 0;
+}

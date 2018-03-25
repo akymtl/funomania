@@ -1,0 +1,44 @@
+.carousel-wrapper {
+  margin: 20px auto 0 auto;
+  width: 220px;
+  height: 220px;
+  perspective: 1000px;
+}
+
+.carousel {
+  width: 100%;
+  transform-style: preserve-3d;
+  animation: rotate 10s steps(10000, end) infinite;
+}
+
+@keyframes rotate {   
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+} 
+
+.slide {
+  display: block;
+  position: absolute;
+  opacity: 0.975;
+}
+
+.first {
+  transform: rotateY(0deg) translateZ(125px);
+}
+.second {
+  transform: rotateY(90deg) translateZ(125px);
+}
+.third {
+  transform: rotateY(180deg) translateZ(125px);
+}
+.fourth {
+  transform: rotateY(270deg) translateZ(125px);
+}
+
+.para {
+    margin-top: 35px;
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fun-O-Mania 2.0</title>
+<!--Tab Image-->
+<link rel="shortcut icon" href="image/logo.png" />
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+    
+<!--Shared CSS-->
+<link rel="stylesheet" href="css/shared/bootstrap.min.css">
+<link rel="stylesheet" href="css/shared/bootstrap.css">
+
+<!--User CSS-->
+<link rel="stylesheet" href="css/user/index.css">
+    
+    
+<!--Shared JS-->
+<script src="js/shared/jquery.min.js"></script>
+<script src="js/shared/bootstrap.min.js"></script>
+<script src="js/shared/angular.min.js"></script>
+<script src="js/shared/angular-route.min.js"></script>
+<script src="js/shared/angular-cookies.min.js"></script>
+
+<!--JS Files-->
+<!--Application-->
+<script src="js/user/application.js"></script>
+
+<!--Service Files-->
+<script src="js/user/services/homeServices.js"></script>
+<script src="js/user/services/feedbackServices.js"></script>
+
+<!--Controller Files-->
+<script src="js/user/controllers/indexCtrl.js"></script>
+<script src="js/user/controllers/homeCtrl.js"></script>
+<script src="js/user/controllers/feedbackCtrl.js"></script>
+<script src="js/user/controllers/eventsCtrl.js"></script>
+<script src="js/user/controllers/galleryCtrl.js"></script>
+<script src="js/user/controllers/scoresCtrl.js"></script>
+<script src="js/user/controllers/teamsCtrl.js"></script>
+    
+</head>
+
+<body ng-app="funomania" ng-controller="indexCtrl">
+   
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" >
+    
+    <!--Funomania Logo-->
+    <img class="logo" src="image/logo.png">
+    
+    <!--Navbar Brand-->
+    <a class="navbar-brand brand-bg" href="#home" ng-click="navBrand()">Fun-O-Mania 2.0</a>
+
+    <!--Navbar Options-->
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="dropdown">
+                <a class="nav-link" data-toggle="dropdown" id="team" style="cursor: pointer;">Teams
+                    <span class="caret"></span>
+                </a>
+                
+                <!-- Teams Dropdown -->
+                <div class="dropdown-menu" aria-labelledby="team">
+                    <a class="dropdown-item" href="#/teams/valkyrie" ng-click="dropdown()">Valkyrie</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#/teams/illuminati" ng-click="dropdown()">Illuminati</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#/teams/spartans" ng-click="dropdown()">Spartans</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#/teams/archadians" ng-click="dropdown()">Archadians</a> 
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#/events" ng-class="getClass('/events')">Events</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#/scores" ng-class="getClass('/scores')">Scores</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#/gallery" ng-class="getClass('/gallery')">Gallery</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#/feedback" ng-class="getClass('/feedback')">Feedback</a>
+            </li>
+        </ul>
+        
+        <!-- Find your team -->
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control empId-text mr-sm-2" type="number" ng-maxlength="6"
+                   ng-model="empId" placeholder="Enter Employee No." required>
+            <button class="btn btn-primary"
+                id="mybutton" ng-click="findTeam()" type="submit">Find Your Team
+            </button>
+        </form>
+    </div>
+</nav>
+
+<!--Partial Pages-->
+<ng-view></ng-view>
+
+<!-- Footer -->
+<section class="footer">
+    <div class="col-md-offset-1 col-md-10">
+        <div class="row">
+            <div class="col-sm-4">
+                <p class="text-left">
+                    <a style="color: white;" href="http://10.88.225.2:8080/funomania/">
+                        Fun-O-Mania	2017
+                    </a>
+                </p>
+            </div>
+            <div class="col-sm-4">                
+                <p class="text-center">
+                    Copyright&copy; Fun-O-Mania 2.0
+                </p>
+            </div>
+            <div class="col-sm-4">                
+                <p class="text-right">
+                    Your visit no.12358
+                </p>
+            </div>
+        </div>            
+    </div>
+</section>
+</body>
+</html>

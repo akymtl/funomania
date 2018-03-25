@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="css/user/events.css">
+
+<div class="col-md-offset-1 col-md-10 partial-page" ng-init="init()">
+    <section class="timeline">
+        <ul>
+            <li ng-repeat="event in events track by $index">
+                <div class="content">
+                    <p>{{event.eventDate}} | {{event.eventName}}</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+</div>
